@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+    --marine-blue: hsl(213, 96%, 18%);
+    --purplish-blue: hsl(243, 100%, 62%);
+    --pastel-blue: hsl(228, 100%, 84%);
+    --light-blue: hsl(206, 94%, 87%);
+    --strawberry-red: hsl(354, 84%, 57%);
+    --cool-gray: hsl(231, 11%, 63%);
+    --light-gray: hsl(229, 24%, 87%);
+    --magnolia: hsl(217, 100%, 97%);
+    --alabaster: hsl(231, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+    --btnBack: #17498d;
+}
+
+body{
+    font-family: "Ubuntu", sans-serif;
+    background-color: var(--magnolia);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    gap: 60px;
+    width: 55rem;
+    height: 35rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.left {
+    width: 270px;
+    height: auto;
+    background-image: url('./assets/images/bg-sidebar-desktop.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.asideStep{
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.block{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.num{
+    border: 1px solid var(--light-blue);
+    border-radius: 50px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.num.active{
+    background-color: var(--light-blue);
+    color: black;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+}
+
+.details h3,.details p{
+    margin: 0;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.details p{
+    color: var(--cool-gray);
+    font-size: 14px;
+}
+
+.details h3{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.right{
+    padding-top: 50px;
+}
+
+.rightStep{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header{
+    line-height: 35px;
+}
+
+.header h1,.header p{
+    margin: 0;
+}
+
+.header h1{
+    color: var(--marine-blue);
+}
+
+.header p{
+    color: var(--cool-gray);
+}
+
+.content{
+    height: 350px;
+}
+
+.footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#nxtbtn{
+    color: var(--white);
+    border: none;
+    background-color: var(--marine-blue);
+    transition: all ease-in-out 0.3s;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+#nxtbtn:hover{
+    background-color: var(--purplish-blue);
+}
+
+#prvbtn{
+    color: var(--cool-gray);
+    border: none;
+    background-color: transparent;
+    transition: all ease-in-out 0.3s;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#prvbtn:hover{
+    color: var(--marine-blue);
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: auto;
+}
+
+.formGroup div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.name{
+    color: var(--marine-blue);
+    font-size: 16px;
+}
+
+#error{
+    color: var(--strawberry-red);
+    font-weight: 500;
+    display: none;
+}
+
+.formGroup input{
+    width: 90%;
+    padding: 10px 20px;
+    border: 1px solid var(--cool-gray);
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--marine-blue);
+}
+
+.formGroup input::placeholder{
+    color: var(--cool-gray);
+}
+
+.formGroup input:focus{
+    border: 1px solid var(--purplish-blue);
+}
+
+.formGroup input:invalid{
+    border: 1px solid var(--strawberry-red);
+}
